@@ -1,4 +1,3 @@
-import { Field, ObjectType } from "type-graphql";
 import {
   Entity,
   Column,
@@ -23,40 +22,29 @@ export enum UserRole {
   SENIOR = "senior",
 }
 
-@ObjectType()
 @Entity("Person")
 export class Person extends BaseEntity {
   @PrimaryColumn()
   university_id: string;
 
-  @Field()
   @Column("varchar", { default: "" })
   email: string;
 
-  @Field()
   @Column("varchar", { default: "" })
   first_name: string;
 
-  @Field()
   @Column("varchar", { default: "" })
   last_name: string;
 
-  @Field()
   @Column("varchar", { default: "" })
   phone_number: string;
 
-  @Field()
   @Column({
     type: "enum",
     enum: UserRole,
   })
   role: UserRole;
 
-  @Field()
-  @Column("boolean", { default: false })
-  verified: boolean;
-
-  @Field()
   @OneToMany(() => Checkout, (checkout) => checkout.university_id)
   checkout: Checkout;
 

@@ -1,4 +1,3 @@
-import { Field, ObjectType } from "type-graphql";
 import {
   Entity,
   Column,
@@ -17,32 +16,26 @@ export enum ApplicationStatus {
   REMOVED = "removed",
 }
 
-@ObjectType()
 @Entity("Application")
 export class Application extends BaseEntity {
   @PrimaryGeneratedColumn("uuid")
   id: string;
 
-  @Field()
   @Column("varchar", { default: "" })
   brand: string;
 
-  @Field()
   @Column("varchar", { default: "" })
   model: string;
 
-  @Field()
   @Column({
     type: "enum",
     enum: ApplicationStatus,
   })
   status: ApplicationStatus;
 
-  @Field(() => Person)
   @ManyToOne(() => Person, (university_id) => university_id.checkout)
   university_id: Person;
 
-  @Field()
   @Column("varchar", { default: "" })
   reviewed_by: string;
 

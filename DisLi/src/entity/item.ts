@@ -1,4 +1,3 @@
-import { Field, ObjectType } from "type-graphql";
 import {
   Entity,
   Column,
@@ -16,25 +15,20 @@ export enum DeviceStatus {
   BROKEN = "broken",
 }
 
-@ObjectType()
 @Entity("Item")
 export class Item extends BaseEntity {
-  @Field(() => String)
   @PrimaryColumn()
   serial_number: string;
 
-  @Field()
   @Column("varchar", { default: "" })
   brand: string;
 
-  @Field()
   @Column("varchar", { default: "" })
   model: string;
 
   @Column("varchar", { default: "" })
   code_name: string;
 
-  @Field()
   @Column({
     type: "enum",
     enum: DeviceStatus,

@@ -1,4 +1,3 @@
-import { Field, ObjectType } from "type-graphql";
 import {
   Entity,
   Column,
@@ -19,40 +18,32 @@ export enum UserRole {
   SENIOR = "senior",
 }
 
-@ObjectType()
 @Entity("Help")
 export class Help extends BaseEntity {
   @PrimaryGeneratedColumn("uuid")
   id: string;
 
-  @Field(() => Person)
   @ManyToOne(() => Person, (university_id) => university_id.checkout)
   university_id: Person;
 
-  @Field()
   @Column("varchar", { default: "" })
   first_name: string;
 
-  @Field()
   @Column("varchar", { default: "" })
   last_name: string;
 
-  @Field()
   @Column("varchar", { default: "" })
   room: string;
 
-  @Field()
   @Column({
     type: "enum",
     enum: UserRole,
   })
   role: UserRole;
 
-  @Field()
   @Column("varchar", { default: "" })
   Problem: string;
 
-  @Field()
   @Column("boolean", { default: false })
   resolved: boolean;
 
