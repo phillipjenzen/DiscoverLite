@@ -14,7 +14,7 @@ import { Waitlist } from "../entity/waitlist";
 export const AppDataSource = new DataSource({
   type: "postgres",
   // host: "db",
-  host: "localhost",
+  host: "db",
   port: 5432,
   // username: "postgres",
   username: "test",
