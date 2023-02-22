@@ -1,15 +1,13 @@
-import "dotenv/config";
 import { AppDataSource } from "./utils/data-source";
 import "reflect-metadata";
 import express from "express";
-import { ApolloServer } from "apollo-server-express";
-import { buildSchema } from "type-graphql";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import { person_resolver } from "./resolvers/person_resolver";
-// import { friend_resolver } from "./resolvers/test1";
+import Checkout from "./routes/checkout";
+import Help from "./routes/help";
+import Item from "./routes/item";
 
-const port = 4003;
+const port = 4000;
 
 (async () => {
   const app = express();
@@ -26,18 +24,15 @@ const port = 4003;
     res.send("SUP");
   });
 
-  AppDataSource.initialize();
-
-  const apolloServer = new ApolloServer({
-    schema: await buildSchema({
-      resolvers: [person_resolver],
-    }),
-    context: ({ req, res }) => ({ req, res }),
+  app.get("/help", (_, res) => {
+    res.send("Look elsewhere!");
   });
 
-  await apolloServer.start();
+  app.use("/checkout", Checkout);
+  app.use("/help", Help);
+  app.use("/item", Item);
 
-  apolloServer.applyMiddleware({ app, cors: false });
+  AppDataSource.initialize();
 
   app.listen(port, () => {
     console.log(`Express is listening on port ${port}`);
