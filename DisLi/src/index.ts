@@ -3,9 +3,11 @@ import "reflect-metadata";
 import express from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import Checkout from "./routes/checkout";
+import Application from "./routes/application";
 import Help from "./routes/help";
-import Item from "./routes/item";
+import Inventory from "./routes/inventory";
+import Program from "./routes/program";
+
 
 const port = 4000;
 
@@ -24,13 +26,11 @@ const port = 4000;
     res.send("SUP");
   });
 
-  app.get("/help", (_, res) => {
-    res.send("Look elsewhere!");
-  });
-
-  app.use("/checkout", Checkout);
+  app.use("/application", Application);
   app.use("/help", Help);
-  app.use("/item", Item);
+  app.use("/inventory", Inventory);
+  app.use("/program", Program);
+
 
   AppDataSource.initialize();
 
