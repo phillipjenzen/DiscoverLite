@@ -32,6 +32,7 @@ export class Item extends BaseEntity {
   @Column({
     type: "enum",
     enum: DeviceStatus,
+    nullable: true
   })
   status: DeviceStatus;
 
