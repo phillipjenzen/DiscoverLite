@@ -5,9 +5,13 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
   PrimaryGeneratedColumn,
+  Unique,
 } from "typeorm";
 
+import { UserRole } from "../utils/UserRoles";
+
 @Entity("Program")
+@Unique("index_name", ["code_name", "availiable_to"])
 export class Program extends BaseEntity {
   @PrimaryGeneratedColumn("uuid")
   id: string;
@@ -15,8 +19,14 @@ export class Program extends BaseEntity {
   @Column("varchar", { default: "" })
   code_name: string;
 
-  @Column("varchar", { default: "" })
-  availiable_to: string;
+  @Column({
+    type: "enum",
+    enum: UserRole,
+  })
+  availiable_to: UserRole;
+
+  @Column("boolean", { default: false })
+  deprecated: boolean;
 
   @CreateDateColumn({
     type: "timestamp",

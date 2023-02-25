@@ -13,14 +13,7 @@ import { Waitlist } from "./waitlist";
 import { Application } from "./application";
 import { Help } from "./help";
 
-export enum UserRole {
-  ADMIN = "admin",
-  FACULTY = "faculty",
-  FRESHMEN = "freshmen",
-  SOPHMORE = "sophmore",
-  JUNIOR = "junior",
-  SENIOR = "senior",
-}
+import { UserRole } from "../utils/UserRoles";
 
 @Entity("Person")
 export class Person extends BaseEntity {

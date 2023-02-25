@@ -9,15 +9,6 @@ import {
 } from "typeorm";
 import { Person } from "./person";
 
-export enum UserRole {
-  ADMIN = "admin",
-  FACULTY = "faculty",
-  FRESHMEN = "freshmen",
-  SOPHMORE = "sophmore",
-  JUNIOR = "junior",
-  SENIOR = "senior",
-}
-
 @Entity("Help")
 export class Help extends BaseEntity {
   @PrimaryGeneratedColumn("uuid")
@@ -35,14 +26,8 @@ export class Help extends BaseEntity {
   @Column("varchar", { default: "" })
   room: string;
 
-  @Column({
-    type: "enum",
-    enum: UserRole,
-  })
-  role: UserRole;
-
   @Column("varchar", { default: "" })
-  Problem: string;
+  problem: string;
 
   @Column("boolean", { default: false })
   resolved: boolean;
