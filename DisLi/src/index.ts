@@ -1,14 +1,24 @@
 import { AppDataSource } from "./utils/data-source";
 import "reflect-metadata";
-
-import create_server from "./utils/server";
+import express from "express";
+import routes from "./routes";
+import { clearDB } from "./utils/clearDB";
 
 const port = 4000;
 
-const app = create_server();
+const app = express();
+
+app.use(express.json());
+
+routes(app);
 
 app.get("/", (_, res) => {
   res.send("SUP");
+});
+
+app.get("/dev/wipe-database", async (_, res) => {
+  clearDB();
+  res.send("deleted");
 });
 
 AppDataSource.initialize();

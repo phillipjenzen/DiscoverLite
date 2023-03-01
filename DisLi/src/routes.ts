@@ -4,7 +4,7 @@ import Help from "./routes/help";
 import Inventory from "./routes/inventory";
 import Program from "./routes/program";
 
-function routes(app: Express) {
+const routes =  (app: Express) => {
   app.use("/application", Application);
   app.use("/help", Help);
   app.use("/inventory", Inventory);
