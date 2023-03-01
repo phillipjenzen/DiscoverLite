@@ -1,0 +1,42 @@
+{
+    "metadata": {
+        "version": "2.0"
+    },
+    "contentContainerWidth": "narrow",
+    "content": [
+        {
+            "elementType": "divider",
+            "borderColor": "transparent"
+        },
+        {
+            "elementType": "container",
+            "id": "headerContainer",
+            "wrapperStyle": "focal",
+            "borderStyle": "solid",
+            "borderRadius": "xxloose",
+            "padding": "tight",
+            "backgroundColor": "skyblue",
+            "content": [
+                {
+                    "elementType": "nameTag",
+                    "nameTagStyle": "vertical",
+                    "marginBottom": "none",
+                    "imageHeight": "xlarge",
+                    "imageWidth": "xlarge",
+                    "imageBorderColor": "black",
+                    "image": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png",
+                        "alt": "Person Icon Image"
+                    }
+                },
+                {
+                    "elementType": "blockHeading",
+                    "heading": "Welcome to DiscoverE, <br> Test User!",
+                    "headingLevel": 1,
+                    "headingTextAlignment": "center",
+                    "marginTop": "none"
+                }
+            ]
+        }
+    ]
+}
