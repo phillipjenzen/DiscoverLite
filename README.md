@@ -20,8 +20,19 @@ To use this project, you must use an application to test the endpoints, such as 
 
 #### Credits
 
-Product Owner: Wage Hagen
-Scrum Master: Phillip Charles Jensen
-QA Tester: Christian Leon
-Backend Developer: Jonah Lozano
-Frontend Developer: Luis Valencia
+- Product Owner: Wage Hagen
+- Scrum Master: Phillip Charles Jensen
+- QA Tester: Christian Leon
+- Backend Developer: Jonah Lozano
+- Frontend Developer: Luis Valencia
+
+## Badges
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+
+## Features
+
+- Inventory management
+- Checkout management
+- Support management
+- Tutorial services
