@@ -16,10 +16,4 @@ router.post("/", authorize_page([UserRole.ADMIN]), inventory_logic.add_item);
 
 router.put("/", authorize_page([UserRole.ADMIN]), inventory_logic.modify_item);
 
-router.delete(
-  "/",
-  authorize_page([UserRole.ADMIN]),
-  inventory_logic.delete_item
-);
-
 export = router;

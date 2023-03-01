@@ -1,53 +1,17 @@
 import express from "express";
 const router = express.Router();
-import { Program } from "../entity/program";
-import bodyParser from "body-parser";
-import { QueryFailedError } from "typeorm";
-var jsonParser = bodyParser.json();
+import program_logic from "../logic/program_logic";
+import authorize_page from "../middleware/authorize_page";
+import { UserRole } from "../utils/UserRoles";
 
-// ADMIN
-// view programs
-router.get("/", async (_req, res) => {
-  try {
-    const item_details = await Program.findBy({});
+router.get("/", authorize_page([UserRole.ADMIN]), program_logic.view_programs);
 
-    res.status(200).json(item_details);
-  } catch (err) {
-    console.log(err.stack);
-    res.status(404).send("ERROR");
-  }
-});
+router.post("/", authorize_page([UserRole.ADMIN]), program_logic.add_program);
 
-// ADMIN
-// add programs
-router.post("/", jsonParser, async (req, res) => {
-  try {
-    const code_name = req.body.code_name;
-    const availiable_to = req.body.availiable_to;
-
-    const new_device = Program.create({
-      code_name,
-      availiable_to,
-    });
-
-    await Program.insert(new_device);
-
-    res.status(201).json(new_device);
-  } catch (err) {
-    console.log(err.stack);
-    if (err instanceof QueryFailedError) {
-      res.status(404).send(err.message);
-    } else {
-      res.status(400).send("ERROR");
-    }
-  }
-});
-
-// ADMIN
-// modify/depricate inventory
-router.put("/", async (req, res) => {
-  req.params;
-  res.status(200).send("put-inventory");
-});
+router.delete(
+  "/",
+  authorize_page([UserRole.ADMIN]),
+  program_logic.delete_program
+);
 
 export = router;

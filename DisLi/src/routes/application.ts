@@ -1,30 +1,31 @@
 import express from "express";
+import authorize_page = require("../middleware/authorize_page");
+import { UserRole } from "../utils/UserRoles";
 const router = express.Router();
-import { Application } from "../entity/application";
-import { ApplicationStatus } from "../entity/application";
+import application_logic = require("../logic/application_logic");
 
-// ADMIN
-// view all applications
-router.get("/", async (req, res) => {
-    const all_apps = await Application.findBy({ status: ApplicationStatus.PENDING });
-    all_apps.find;
-  req.params;
-  res.status(200).send("get-application-all");
-});
+router.get(
+  "/",
+  authorize_page([UserRole.ADMIN]),
+  application_logic.view_all_applications
+);
 
-// ADMIN
-// view specific application details
-router.get("/:id", async (req, res) => {
-    req.params;
-    res.status(200).send("get-application-specific");
-  });
-  
+router.get(
+  "/:id",
+  authorize_page([UserRole.ADMIN]),
+  application_logic.view_application
+);
 
-// ADMIN
-// accept/decline specific application
-router.put("/", async (req, res) => {
-  req.params;
-  res.status(200).send("put-application");
-});
+router.post(
+  "/",
+  authorize_page([UserRole.ADMIN, UserRole.FACULTY]),
+  application_logic.add_application
+);
+
+router.put(
+  "/",
+  authorize_page([UserRole.ADMIN]),
+  application_logic.deicide_on_application
+);
 
 export = router;
