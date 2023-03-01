@@ -30,13 +30,14 @@ export class Application extends BaseEntity {
   @Column({
     type: "enum",
     enum: ApplicationStatus,
+    default: ApplicationStatus.PENDING,
   })
   status: ApplicationStatus;
 
   @ManyToOne(() => Person, (university_id) => university_id.checkout)
   university_id: Person;
 
-  @Column("varchar", { default: "" })
+  @Column("varchar", { default: "", nullable: true })
   reviewed_by: string;
 
   @CreateDateColumn({

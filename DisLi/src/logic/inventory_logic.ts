@@ -47,7 +47,7 @@ const add_item = async (req: Request, res: Response) => {
   } catch (err) {
     console.log(err.stack);
     if (err instanceof QueryFailedError) {
-      res.status(404).send(err.message);
+      res.status(400).send(err.message);
     } else {
       res.status(400).send("ERROR");
     }
@@ -82,23 +82,4 @@ const modify_item = async (req: Request, res: Response) => {
   }
 };
 
-const delete_item = async (req: Request, res: Response) => {
-  try {
-    const serial_number = req.body.serial_number;
-
-    const existing_item = await Item.findOneByOrFail({ serial_number });
-
-    await Item.remove(existing_item);
-
-    res.status(204).send();
-  } catch (err) {
-    console.log(err.stack);
-    if (err instanceof EntityNotFoundError) {
-      res.status(404).send(err.message);
-    } else {
-      res.status(400).send("ERROR");
-    }
-  }
-};
-
-export = { view_inventory, view_item, add_item, modify_item, delete_item };
+export = { view_inventory, view_item, add_item, modify_item };
