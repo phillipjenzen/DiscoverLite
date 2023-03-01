@@ -2,7 +2,7 @@ export enum UserRole {
   ADMIN = "admin",
   FACULTY = "faculty",
   FRESHMEN = "freshman",
-  SOPHMORE = "sophmore",
+  SOPHOMORE = "sophomore",
   JUNIOR = "junior",
   SENIOR = "senior",
 }
