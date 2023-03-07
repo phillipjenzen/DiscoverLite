@@ -22,6 +22,7 @@
         {
             "elementType": "container",
             "id": "tableContainer",
+            "backgroundColor": "white",
             "content": [
                 {
                     "elementType": "collapsible",
