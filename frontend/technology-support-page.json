@@ -1,0 +1,546 @@
+{
+	"metadata": {
+		"version": "2.0"
+	},
+	"contentContainerWidth": "narrow",
+	"content": [
+		{
+			"elementType": "container",
+			"id": "wifiContainer",
+			"backgroundColor": "white",
+			"content": [
+                {
+                    "elementType": "collapsible",
+                    "disclosureIcon": "chevron",
+                    "title": "Connect to Eduroam Wi-Fi",
+                    "image": {
+                        "url": "https://static.vecteezy.com/system/resources/thumbnails/003/520/492/small/wifi-icon-illustration-isolated-wifi-hotspot-symbol-internet-signal-graphic-design-wireless-connection-concept-pictogram-wifi-network-line-symbol-wireless-network-outluine-element-vector.jpg",
+                        "alt": "Wi-Fi Logo"
+                    },
+                    "content": [
+                        {
+                            "elementType": "container",
+                            "id": "wifiInnerContainer",
+                            "content": [
+                                {
+                                    "elementType": "collapsible",
+                                    "disclosureIcon": "chevron",
+                                    "title": "Apple Device",
+                                    "image": {
+                                        "url": "https://cdn.mos.cms.futurecdn.net/6bTF6C2QiWXvhi33fJi3AC-1920-80.jpg.webp",
+                                        "alt": "Apple"
+                                    },
+                                    "content": [
+                                        {
+                                            "elementType": "table",
+                                            "id": "appleTable",
+                                            "outerBorderWidth": "1px",
+                                            "rowBorderStyle": "solid",
+                                            "columnBorderStyle": "none",
+                                            "padding": "xtight",
+                                            "columnOptions": [
+                                                {
+                                                    "horizontalAlign": "center",
+                                                    "verticalAlign": "middle"
+                                                },
+                                                {
+                                                    "horizontalAlign": "left"
+                                                },
+                                                [],
+                                                []
+                                            ],
+                                            "rows": [
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "1."
+                                                        },
+                                                        {
+                                                            "title": "Click on Settings."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "2."
+                                                        },
+                                                        {
+                                                            "title": "Click on Wi-Fi."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "3."
+                                                        },
+                                                        {
+                                                            "title": "Select Eduroam."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "4."
+                                                        },
+                                                        {
+                                                            "title": "Open the Safari Browser."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "5."
+                                                        },
+                                                        {
+                                                            "title": "Select \"If you need to configure your device for Eduroam - Click Here\". If you are not redirected to the appropriate site, click on the direct install link: https://cloud.securew2.com/public/78509/eduroam/"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "6."
+                                                        },
+                                                        {
+                                                            "title": "Enter your full email address. <br> (username@mail.fresnostate.edu)"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "7."
+                                                        },
+                                                        {
+                                                            "title": "Make sure your iOS is selected, then click on JoinNow."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "8."
+                                                        },
+                                                        {
+                                                            "title": "Click on Install when you are prompted to install the new profile."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "9."
+                                                        },
+                                                        {
+                                                            "title": "Enter your mobile device password and click on Install."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "10."
+                                                        },
+                                                        {
+                                                            "title": "Enter your email password and click on Next, then Done."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "11."
+                                                        },
+                                                        {
+                                                            "title": "You will get a window with instructions to select the Eduroam Wi-Fi network from the Settings app."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "12."
+                                                        },
+                                                        {
+                                                            "title": "The small check mark next to Eduroam indicates that you are connected."
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "elementType": "collapsible",
+                                    "disclosureIcon": "chevron",
+                                    "title": "Android Device",
+                                    "image": {
+                                        "url": "https://1000logos.net/wp-content/uploads/2016/10/Android-Logo-2008.png",
+                                        "alt": "Android"
+                                    },
+                                    "content": [
+                                        {
+                                            "elementType": "table",
+                                            "id": "androidTable",
+                                            "outerBorderWidth": "1px",
+                                            "rowBorderStyle": "solid",
+                                            "columnBorderStyle": "none",
+                                            "padding": "xtight",
+                                            "columnOptions": [
+                                                {
+                                                    "horizontalAlign": "center",
+                                                    "verticalAlign": "middle"
+                                                },
+                                                {
+                                                    "horizontalAlign": "left"
+                                                },
+                                                [],
+                                                []
+                                            ],
+                                            "rows": [
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "1."
+                                                        },
+                                                        {
+                                                            "title": "Click on the Settings app."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "2."
+                                                        },
+                                                        {
+                                                            "title": "Click on Wi-Fi."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "3."
+                                                        },
+                                                        {
+                                                            "title": "Select Eduroam."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "4."
+                                                        },
+                                                        {
+                                                            "title": "Select Connect to Network."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "5."
+                                                        },
+                                                        {
+                                                            "title": "Select TTLS for the EAP Method."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "6."
+                                                        },
+                                                        {
+                                                            "title": "Select PAP for the Phase 2 Authentication."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "7."
+                                                        },
+                                                        {
+                                                            "title": "Enter your full email address in the Identity field. <br> (username@mail.fresnostate.edu)"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "8."
+                                                        },
+                                                        {
+                                                            "title": "Enter your email password in the password field."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "9."
+                                                        },
+                                                        {
+                                                            "title": "Click on Save."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "10."
+                                                        },
+                                                        {
+                                                            "title": "You will get a confirmation screen showing that you are connected to Eduroam."
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "elementType": "collapsible",
+                                    "disclosureIcon": "chevron",
+                                    "title": "Windows Device",
+                                    "image": {
+                                        "url": "https://blogs.windows.com/wp-content/uploads/sites/2/2012/02/6874.5_5F00_01C91EBC.png",
+                                        "alt": "Windows"
+                                    },
+                                    "content": [
+                                        {
+                                            "elementType": "table",
+                                            "id": "windowsTable",
+                                            "outerBorderWidth": "1px",
+                                            "rowBorderStyle": "solid",
+                                            "columnBorderStyle": "none",
+                                            "padding": "xtight",
+                                            "columnOptions": [
+                                                {
+                                                    "horizontalAlign": "center",
+                                                    "verticalAlign": "middle"
+                                                },
+                                                {
+                                                    "horizontalAlign": "left"
+                                                },
+                                                [],
+                                                []
+                                            ],
+                                            "rows": [
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "1."
+                                                        },
+                                                        {
+                                                            "title": "Click on your device's network icon."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "2."
+                                                        },
+                                                        {
+                                                            "title": "Click on Connect."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "3."
+                                                        },
+                                                        {
+                                                            "title": "In the Username box enter your full Fresno State email. <br> (username@mail.fresnostate.edu)"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "4."
+                                                        },
+                                                        {
+                                                            "title": "In the Password box enter your Fresno State password."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "5."
+                                                        },
+                                                        {
+                                                            "title": "Click Enter."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "6."
+                                                        },
+                                                        {
+                                                            "title": "Wait and you may be prompted with a warning, skip and click connect anyways."
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "cells": [
+                                                        {
+                                                            "title": "7."
+                                                        },
+                                                        {
+                                                            "title": "You are now connected to Eduroam."
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+			    }
+            ]
+		},
+        {
+            "elementType": "divider",
+            "borderColor": "transparent"
+        },
+        {
+			"elementType": "container",
+			"id": "officeContainer",
+			"backgroundColor": "white",
+			"content": [
+                {
+                    "elementType": "collapsible",
+                    "disclosureIcon": "chevron",
+                    "title": "Microsoft Office 365",
+                    "image": {
+                        "url": "https://cdn-icons-png.flaticon.com/512/906/906309.png",
+                        "alt": "Microsoft Logo"
+                    },
+                    "content": [
+                        {
+                            "elementType": "container",
+                            "id": "officeInnerContainer",
+                            "content": [
+                                {
+                                    "elementType": "html",
+                                    "html": "<h4>Available for Faculty, Staff, and Students!</h4>"
+                                },
+                                {
+                                    "elementType": "html",
+                                    "html": "<p>Microsoft is now offering their Office 365 product to students, faculty, and staff at Fresno State. Technology Services is providing access to this service and the Help Desk is collaborating with the DISCOVERe Hub to provide support. Office 365 provides students access to Microsoft software at no cost for academic work and faculty may choose to use this service with their students.</p><br>"
+                                },
+                                {
+                                    "elementType": "html",
+                                    "html": "<h4>Available programs of Fresno State's Office 365 Suite include:</h4><ul><li>Word</li><li>Excel</li><li>PowerPoint</li><li>Publisher</li><li>Access</li><li>OneNote</li><li>OneDrive</li></ul><br>"
+                                },
+                                {
+                                    "elementType": "html",
+                                    "html": "<h4>Office 365 Features:</h4> <ul> <li>Work from anywhere using your PC, Mac, or mobile device.</li> <li>Fast and simple access to files using OneDrive file sharing.</li> <li>Files in OneDrive are automatically backed up online.</li> <li>Access, edit, and share Word, Excel, and Powerpoint documents from your mobile device using Office mobile apps.</li> </ul> <br>"
+                                },
+                                {
+                                    "elementType": "html",
+                                    "html": "<h4>How to get Office 365:</h4> <p> To sign up for Office 365 using your mail.fresnostate.edu account, please <a href='https://www.microsoft.com/en-us/education/products/office'>click here</a> to access the Office Portal. Please note that you must use a mail.fresnostate.edu account, and not your csufresno.edu account to sign up for Office 365. </p> <p> Once you are signed up, you will use your mail.fresnostate.edu credentials (username@mail.fresnostate.edu) to access Office 365 at <a href='http://login.microsoftonline.com'>http://login.microsoftonline.com</a> </p> <br>"
+                                },
+                                {
+                                    "elementType": "html",
+                                    "html": "<h4>Please note:</h4> <ul> <li>Restricted and confidential data should not be stored in Office 365 OneDrive</li> <li>Google's Gmail will continue to be the primary service for faculty and staff email and calendaring.</li> <li>If you already have Office software, such as Word, installed on a state-owned computer, such as your faculty laptop or staff computer, please do not download and install the Office 365 versions of that software as this will interfere with the proper operation of your existing software.</li> <li>While you may install Office 365 software on up to five computers, all your installs of Office 365 will share the same @mail.fresnostate.edu cloud account.</li> </ul>"
+                                }
+                            ]
+                        }
+                    ]
+			    }
+            ]
+		},
+        {
+            "elementType": "divider",
+            "borderColor": "transparent"
+        },
+        {
+			"elementType": "container",
+			"id": "adobeContainer",
+			"backgroundColor": "white",
+			"content": [
+                {
+                    "elementType": "collapsible",
+                    "disclosureIcon": "chevron",
+                    "title": "Adobe Creative Cloud",
+                    "image": {
+                        "url": "https://www.nicepng.com/png/full/78-780271_creative-cloud-adobe-cc-logo-adobe-creative-cloud.png",
+                        "alt": "Adobe Logo"
+                    },
+                    "content": [
+                        {
+                            "elementType": "container",
+                            "id": "adobeInnerContainer",
+                            "content": [
+                                {
+                                    "elementType": "html",
+                                    "html": "<h4>Available for Faculty, Staff, and Students!</h4>"
+                                },
+                                {
+                                    "elementType": "html",
+                                    "html": "<h4>Software Included:</h4> <ul> <li>Photoshop</li> <li>Illustrator</li> <li>InDesign</li> <li>Adobe Muse</li> <li>Dreamweaver</li> <li>Flash Professional</li> <li>Premiere Pro</li> <li>After Effects</li> <li>Adobe Audition</li> <li>InCopy, and more...</li> </ul> <br>"
+                                },
+                                {
+                                    "elementType": "html",
+                                    "html": "<h4>Prerequisites:</h4> <ul> <li>An internet connection is required to download and authenticate with Adobe Cloud.</li> <li>An account with Adobe Cloud is required, you will be able to sign up with your Fresno State email address.</li> <li>If you have already used your Fresno State email to register a personal, non-school related, Adobe subscription, please contact the Technology Service Desk prior to purchasing through the online portal. Service Desk - (559) 278-5000</li> </ul> <br>"
+                                },
+                                {
+                                    "elementType": "html",
+                                    "html": "<h4>How to get Adobe Creative Cloud:</h4> <p>To download and install a license please visit the following site: <a href='fresnostate.onthehub.com'>fresnostate.onthehub.com</a> </p> <p>The license allows the software to be installed on one personal device.</p>"
+                                }
+                            ]
+                        }
+                    ]
+			    }
+            ]
+		},
+        {
+            "elementType": "divider",
+            "borderColor": "transparent"
+        },
+        {
+			"elementType": "container",
+			"id": "hyflexContainer",
+			"backgroundColor": "white",
+			"content": [
+                {
+                    "elementType": "collapsible",
+                    "disclosureIcon": "chevron",
+                    "title": "Hyflex",
+                    "image": {
+                        "url": "https://hyflex.commons.gc.cuny.edu/files/2022/09/Copy-of-HyFlex3.png",
+                        "alt": "Hyflex Logo"
+                    },
+                    "content": [
+                        {
+                            "elementType": "container",
+                            "id": "hyflexInnerContainer",
+                            "content": [
+                                {
+                                    "elementType": "html",
+                                    "html": "<h4>Info about Hyflex here.</h4>"
+                                }
+                            ]
+                        }
+                    ]
+			    }
+            ]
+		}
+	]
+}
