@@ -13,9 +13,11 @@
             "id": "headerContainer",
             "wrapperStyle": "focal",
             "borderStyle": "solid",
+            "borderWidth": "1px",
+            "borderColor": "black",
             "borderRadius": "xxloose",
             "padding": "tight",
-            "backgroundColor": "skyblue",
+            "backgroundColor": "white",
             "content": [
                 {
                     "elementType": "nameTag",
