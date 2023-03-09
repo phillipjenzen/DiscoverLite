@@ -14,7 +14,7 @@
                     "disclosureIcon": "chevron",
                     "title": "Connect to Eduroam Wi-Fi",
                     "image": {
-                        "url": "https://static.vecteezy.com/system/resources/thumbnails/003/520/492/small/wifi-icon-illustration-isolated-wifi-hotspot-symbol-internet-signal-graphic-design-wireless-connection-concept-pictogram-wifi-network-line-symbol-wireless-network-outluine-element-vector.jpg",
+                        "url": "https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color/254000/09-512.png",
                         "alt": "Wi-Fi Logo"
                     },
                     "content": [
@@ -480,7 +480,7 @@
                     "disclosureIcon": "chevron",
                     "title": "Adobe Creative Cloud",
                     "image": {
-                        "url": "https://www.nicepng.com/png/full/78-780271_creative-cloud-adobe-cc-logo-adobe-creative-cloud.png",
+                        "url": "https://iconape.com/wp-content/png_logo_vector/iconfinder-2.png",
                         "alt": "Adobe Logo"
                     },
                     "content": [
@@ -534,7 +534,19 @@
                             "content": [
                                 {
                                     "elementType": "html",
-                                    "html": "<h4>Info about Hyflex here.</h4>"
+                                    "html": "<h4>What is HyFlex?</h4> <p>The Hybrid Flexible, or HyFlex, course format is an instructional approach that combines face-to-face (F2F) and online learning. Each class session and learning activity is offered in-person, synchronously online, and asynchronously online. Students can decide how to participate. The flexibility of the HyFlex model demonstrates a commitment to student success, and that flexibility can also enable institutions to maintain educational and research activities during a disruption.<p> <br>"
+                                },
+                                {
+                                    "elementType": "html",
+                                    "html": "<h4>What does HyFlex Look Like at Fresno State?</h4> <p>Up until COVID-19, the traditional modes of instruction on our campus have been face-to-face, blended, and fully online.</p> <ul> <li>Face-to-face: Curriculum is delivered in-person and synchronous student engagement is expected, although course materials and activities may exist online.</li> <li>Blended: Curriculum is delivered with both face-to-face and online components (blended I includes 20 - 66% online and blended II includes 67-99% online. There is a mix of synchronous and asynchronous instruction and interaction.</li> <li>Fully Online - Curriculum is delivered fully online and hence student synchronous and/or asynchronous engagement is expected.</li> </ul> <p>The HyFlex model will become a another mode of instruction at Fresno State, with students being able to participate in person, virtually, or a mix of both. There may be synchronous and/or asynchronous opportunities involved in the virtual aspect of the course.</p> <br>"
+                                },
+                                {
+                                    "elementType": "html",
+                                    "html": "<h4>What Technology is Required for a HyFlex Course?</h4> <p>A HyFlex classroom at Fresno State is equipped with a camera, microphone, computer, an audio/video control unit, video conferencing software, and recording software - this is in addition to the standard DISCOVERe classroom technology.</p> <p>A HyFlex Learning environment may include a suite of tools that allows for active engagement within the learning environment as well as on-demand offline/asynchronous access to course materials, including lectures.</p> <p>The Zoom video conferencing tool is the primary means to allow for synchronous teaching and learning to students who are either physically in the classroom or online.</p> <br>"
+                                },
+                                {
+                                    "elementType": "html",
+                                    "html": "<h4>Who Can Teach a HyFlex Course? Is there training?</h4> <p>Faculty that wish to teach a HyFlex course should be:</p> <ul> <li>comfortable with technology</li> <li>comfortable with juggling multiple audiences</li> <li>comfortable switching attention between the face-to-face classroom to the online environment</li> <li>organized and prepared in advance for lessons and activities</li> <li>comfortable with multiple styles of teaching/pedagogy</li> <li>able to keep students engaged both in the classroom and those online</li> </ul> <p>Faculty who should consider not teaching a HyFlex course:</p> <ul> <li>those who aren’t comfortable with technology</li> <li>those not comfortable with multiple audiences at once</li> <li>challenged to keep students engaged both in the classroom and online</li> <li>those who are not experienced and well-versed in online methods of instruction</li> <li>those who are uncomfortable with having three different audiences (F2F, synchronously online, and perhaps asynchronously online)</li> <li>those who primarily lecture. Better options for those faculty would be to record lectures and post to Canvas or teach synchronously via Zoom</li> </ul> <p>Faculty who self nominate to teach in this modality, and are selected, will be provided with professional development training, pedagogical consultation, course redesign, and technology support. While some faculty may become comfortable leveraging the technology during the professional development training they have received, others may rely on a student assistant for support while in the classroom.</p>"
                                 }
                             ]
                         }
