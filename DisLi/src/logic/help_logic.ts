@@ -48,13 +48,11 @@ const view_help_request_authored = async (req: Request, res: Response) => {
 
 const request_help = async (req: Request, res: Response) => {
   try {
-    const { first_name, last_name, room, problem } = req.body;
+    const { room, problem } = req.body;
 
     // TODO: REMEMBER TO ADD UNIVERSITY_ID with PERSON enitity
 
     const new_device = Help.create({
-      first_name,
-      last_name,
       room,
       problem,
       resolved: false,
