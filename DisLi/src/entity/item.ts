@@ -13,6 +13,7 @@ export enum DeviceStatus {
   LOST = "lost",
   STOLEN = "stolen",
   BROKEN = "broken",
+  CHECKEDIN = "checkedin",
 }
 
 @Entity("Item")
@@ -32,7 +33,8 @@ export class Item extends BaseEntity {
   @Column({
     type: "enum",
     enum: DeviceStatus,
-    nullable: true
+    // nullable: true,
+    default: DeviceStatus.CHECKEDIN,
   })
   status: DeviceStatus;
 
