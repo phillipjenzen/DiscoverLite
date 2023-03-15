@@ -18,12 +18,6 @@ export class Help extends BaseEntity {
   university_id: Person;
 
   @Column("varchar", { default: "" })
-  first_name: string;
-
-  @Column("varchar", { default: "" })
-  last_name: string;
-
-  @Column("varchar", { default: "" })
   room: string;
 
   @Column("varchar", { default: "" })
