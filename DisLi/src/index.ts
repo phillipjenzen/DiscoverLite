@@ -16,8 +16,15 @@ app.get("/", (_, res) => {
   res.send("SUP");
 });
 
-app.post("/test", (req, res) => {
-  console.log(req.body);
+app.get("/test", (req, res) => {
+  // console.log(req.rawHeaders);
+  const tmp = req.rawHeaders.findIndex((ele) => ele === "Authorization");
+  if (!tmp) {
+    console.log("test - LOL");
+  } else {
+    console.log(req.rawHeaders[tmp + 1]);
+  }
+
   const thing = {
     metadata: {
       version: "2.0",
