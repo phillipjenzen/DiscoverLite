@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "version": "2.0"
+    },
+    "contentContainerWidth": "narrow",
+    "content": [
+        {
+            "elementType": "divider",
+            "borderColor": "transparent"
+        },
+        {
+            "elementType": "nameTag",
+            "nameTagStyle": "vertical",
+            "marginBottom": "none",
+            "imageHeight": "xlarge",
+            "imageWidth": "xlarge",
+            "imageBorderColor": "black",
+            "imageBorderWidth": "3px",
+            "image": {
+                "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq_C_PIc7qZIuLVciqIulQTdBtvvcGir8y_w&usqp=CAU",
+                "alt": "User Image"
+            }
+        },
+        {
+            "elementType": "blockHeading",
+            "heading": "Welcome Admin!",
+            "headingLevel": 1,
+            "headingTextColor": "black",
+            "headingTextAlignment": "center",
+            "marginTop": "none",
+            "marginBottom": "none"
+        },
+        {
+            "elementType": "blockHeading",
+            "heading": "Explore the DiscoverE App!",
+            "headingLevel": 2,
+            "headingTextColor": "black",
+            "headingTextAlignment": "center",
+            "marginTop": "none"
+        },
+        {
+            "elementType": "list",
+            "id": "studentList",
+            "itemSize": "medium",
+            "listStyle": "separated",
+            "titleFontSize": "large",
+            "titleTextColor": "white",
+            "accessoryColor": "white",
+            "backgroundColor": "navy",
+            "borderColor": "black",
+            "borderRadius": "loose",
+            "items": [
+                {
+                    "title": "My Profile",
+                    "link": {
+                        "relativePath": ""
+                    }
+                },
+                {
+                    "title": "Appointments",
+                    "link": {
+                        "relativePath": ""
+                    }
+                },
+                {
+                    "title": "Inventory",
+                    "link": {
+                        "relativePath": ""
+                    }
+                },
+                {
+                    "title": "Technology Support",
+                    "link": {
+                        "relativePath": ""
+                    }
+                }
+            ]
+        }
+    ]
+}
