@@ -13,7 +13,7 @@ import { Person } from "./person";
 @Entity("Checkout")
 export class Checkout extends BaseEntity {
   @PrimaryColumn()
-  serial_number: string;
+  serial_number: string; // one to one relationship with iventory item
 
   @ManyToOne(() => Person, (university_id) => university_id.checkout)
   university_id: Person;
