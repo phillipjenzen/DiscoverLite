@@ -19,11 +19,8 @@ app.get("/", (_, res) => {
 app.get("/test", (req, res) => {
   // console.log(req.rawHeaders);
   const tmp = req.rawHeaders.findIndex((ele) => ele === "Authorization");
-  if (!tmp) {
-    console.log("test - LOL");
-  } else {
-    console.log(req.rawHeaders[tmp + 1]);
-  }
+  let jsToken: string;
+  if (tmp) jsToken = req.rawHeaders[tmp + 1].split(" ")[1];
 
   const thing = {
     metadata: {
