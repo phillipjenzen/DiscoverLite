@@ -175,6 +175,7 @@ const modify_item = async (req: Request, res: Response) => {
         },
         elementFields: {
           heading: "",
+          description: "",
           buttons: [],
           marginTop: "none",
           marginBottom: "none",
