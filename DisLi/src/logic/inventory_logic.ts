@@ -173,7 +173,13 @@ const modify_item = async (req: Request, res: Response) => {
         metadata: {
           version: "2.0",
         },
-        elementFields: {},
+        elementFields: {
+          id: "",
+          heading: "",
+          headingLevel: 2,
+          description: "",
+          buttons: [],
+        },
       };
 
       res.status(201).json(thing);
