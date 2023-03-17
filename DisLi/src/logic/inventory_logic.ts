@@ -12,7 +12,7 @@ const view_inventory = async (_req: Request, res: Response) => {
       },
     ];
 
-    item_details.forEach((ele, idx) => {
+    item_details.forEach((ele) => {
       show_items.push({
         elementType: "blockHeading",
         heading: ele.serial_number,
