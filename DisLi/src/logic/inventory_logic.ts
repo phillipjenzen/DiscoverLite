@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import { Item } from "../entity/item";
 import { EntityNotFoundError, QueryFailedError } from "typeorm";
+import { replaceAll } from "../utils/replaceAll";
 
 const view_inventory = async (_req: Request, res: Response) => {
   try {
@@ -13,7 +14,7 @@ const view_inventory = async (_req: Request, res: Response) => {
     ];
 
     item_details.forEach((ele) => {
-      const anID = ele.serial_number.replace("-", "");
+      const anID = replaceAll(ele.serial_number, "-", "");
       console.log(anID);
 
       show_items.push({
