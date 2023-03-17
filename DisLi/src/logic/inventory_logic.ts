@@ -61,7 +61,7 @@ const view_inventory = async (_req: Request, res: Response) => {
                 ajaxRelativePath: "/",
                 requestMethod: "put",
                 postData: {
-                  serial_number: anID,
+                  serial_number: ele.serial_number,
                 },
               },
             ],
