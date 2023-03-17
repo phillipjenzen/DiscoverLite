@@ -45,16 +45,6 @@ const view_inventory = async (_req: Request, res: Response) => {
             events: [
               {
                 eventName: "click",
-                action: "hide",
-                targetId: anID,
-              },
-              {
-                eventName: "click",
-                action: "hide",
-                targetId: `${anID}DIV`,
-              },
-              {
-                eventName: "click",
                 action: "ajaxUpdate",
                 useRelativePathToUpdate: true,
                 targetId: "",
@@ -64,6 +54,16 @@ const view_inventory = async (_req: Request, res: Response) => {
                   serial_number: ele.serial_number,
                   deprecated: true,
                 },
+              },
+              {
+                eventName: "click",
+                action: "hide",
+                targetId: anID,
+              },
+              {
+                eventName: "click",
+                action: "hide",
+                targetId: `${anID}DIV`,
               },
             ],
           },
