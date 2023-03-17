@@ -68,12 +68,10 @@ const view_inventory = async (_req: Request, res: Response) => {
         {
           elementType: "container",
           id: "custom_styling",
-          content: [...item_details],
+          content: show_items,
         },
       ],
     };
-
-    console.log(data);
 
     res.status(200).json(data);
   } catch (err) {
