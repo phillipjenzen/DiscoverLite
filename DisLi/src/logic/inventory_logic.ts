@@ -164,7 +164,8 @@ const modify_item = async (req: Request, res: Response) => {
           version: "2.0",
         },
         elementFields: {
-          heading: "<div style='color:red'>REMOVED</div>",
+          heading: "<span style='color:red;'>REMOVED</span>",
+          headingLevel: 2,
           description: "",
           buttons: [],
         },
