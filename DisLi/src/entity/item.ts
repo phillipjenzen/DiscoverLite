@@ -38,6 +38,9 @@ export class Item extends BaseEntity {
   })
   status: DeviceStatus;
 
+  @Column("boolean", { default: false })
+  deprecated: boolean;
+
   @CreateDateColumn({
     type: "timestamp",
     default: () => "CURRENT_TIMESTAMP(6)",

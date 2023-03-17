@@ -5,7 +5,7 @@ import { replaceAll } from "../utils/replaceAll";
 
 const view_inventory = async (_req: Request, res: Response) => {
   try {
-    const item_details = await Item.findBy({});
+    const item_details = await Item.findBy({ deprecated: false });
 
     let show_items: any = [
       {
@@ -155,13 +155,14 @@ const modify_item = async (req: Request, res: Response) => {
 
     const existing_item = await Item.findOneByOrFail({ serial_number });
 
-    const { brand, model, code_name, status } = req.body;
+    const { brand, model, code_name, status, deprecated } = req.body;
 
     Object.assign(existing_item, {
       brand,
       model,
       code_name,
       status,
+      deprecated,
     });
 
     await Item.update({ serial_number }, existing_item);
