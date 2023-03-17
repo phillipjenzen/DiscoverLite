@@ -13,6 +13,8 @@ const view_inventory = async (_req: Request, res: Response) => {
     ];
 
     item_details.forEach((ele) => {
+      const anID = ele.serial_number.replace("-", "");
+
       show_items.push({
         elementType: "blockHeading",
         heading: ele.serial_number,
@@ -30,20 +32,41 @@ const view_inventory = async (_req: Request, res: Response) => {
             },
           },
           {
-            elementType: "linkButton",
+            elementType: "formButton",
             title: "delete",
             icon: "delete",
+            buttonType: "submit",
             actionStyle: "destructive",
             iconPosition: "iconOnly",
             confirmationMessage: "Are you sure you want to delete this?",
-            link: {
-              relativePath: " ",
-            },
+            events: [
+              {
+                eventName: "click",
+                action: "hide",
+                targetId: anID,
+              },
+              {
+                eventName: "click",
+                action: "hide",
+                targetId: `${anID}DIV`,
+              },
+              {
+                eventName: "click",
+                action: "ajaxUpdate",
+                targetId: anID,
+                ajaxRelativePath: "/inventory",
+                requestMethod: "put",
+                postData: {
+                  serial_number: anID,
+                },
+              },
+            ],
           },
         ],
       });
 
       show_items.push({
+        id: `${anID}DIV`,
         elementType: "divider",
       });
     });
@@ -123,6 +146,7 @@ const add_item = async (req: Request, res: Response) => {
 
 const modify_item = async (req: Request, res: Response) => {
   try {
+    console.log("SUP FROM inventory_logic - modify_item");
     const serial_number = req.body.serial_number;
 
     const existing_item = await Item.findOneByOrFail({ serial_number });
