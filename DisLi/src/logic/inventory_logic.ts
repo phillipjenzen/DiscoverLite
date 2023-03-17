@@ -6,17 +6,6 @@ const view_inventory = async (_req: Request, res: Response) => {
   try {
     const item_details = await Item.findBy({});
 
-    res.status(200).json(item_details);
-  } catch (err) {
-    console.log(err.stack);
-    res.status(404).send("ERROR");
-  }
-};
-
-const view_item = async (req: Request, res: Response) => {
-  try {
-    const serial_number = req.params.id;
-
     const data = {
       metadata: {
         version: "2.0",
@@ -76,11 +65,22 @@ const view_item = async (req: Request, res: Response) => {
       ],
     };
 
-    const item_details = await Item.findOneByOrFail({ serial_number });
-
     console.log(item_details);
 
     res.status(200).json(data);
+  } catch (err) {
+    console.log(err.stack);
+    res.status(404).send("ERROR");
+  }
+};
+
+const view_item = async (req: Request, res: Response) => {
+  try {
+    const serial_number = req.params.id;
+
+    const item_details = await Item.findOneByOrFail({ serial_number });
+
+    res.status(200).json(item_details);
   } catch (err) {
     console.log(err.stack);
     if (err instanceof EntityNotFoundError) {
