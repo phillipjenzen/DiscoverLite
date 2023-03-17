@@ -14,6 +14,7 @@ const view_inventory = async (_req: Request, res: Response) => {
 
     item_details.forEach((ele) => {
       const anID = ele.serial_number.replace("-", "");
+      console.log(anID);
 
       show_items.push({
         elementType: "blockHeading",
