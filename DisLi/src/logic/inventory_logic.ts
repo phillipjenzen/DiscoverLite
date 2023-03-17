@@ -168,7 +168,22 @@ const modify_item = async (req: Request, res: Response) => {
 
     await Item.update({ serial_number }, existing_item);
 
-    res.status(201).json(existing_item);
+    if (deprecated) {
+      const thing = {
+        metadata: {
+          version: "2.0",
+        },
+        elementFields: {
+          title: "REMOVED",
+          buttonType: "submit",
+          actionStyle: "destructive",
+        },
+      };
+
+      res.status(201).json(thing);
+    } else {
+      res.status(201).json(existing_item);
+    }
   } catch (err) {
     console.log(err.stack);
     if (err instanceof QueryFailedError) {
