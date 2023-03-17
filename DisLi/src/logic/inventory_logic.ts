@@ -174,11 +174,10 @@ const modify_item = async (req: Request, res: Response) => {
           version: "2.0",
         },
         elementFields: {
-          id: "",
           heading: "",
-          headingLevel: 2,
-          description: "",
           buttons: [],
+          marginTop: "none",
+          marginBottom: "none",
         },
       };
 
