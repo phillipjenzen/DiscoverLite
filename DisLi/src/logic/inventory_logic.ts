@@ -18,6 +18,7 @@ const view_inventory = async (_req: Request, res: Response) => {
       console.log(anID);
 
       show_items.push({
+        id: anID,
         elementType: "blockHeading",
         heading: ele.serial_number,
         headingLevel: 2,
@@ -55,6 +56,7 @@ const view_inventory = async (_req: Request, res: Response) => {
               {
                 eventName: "click",
                 action: "ajaxUpdate",
+                useRelativePathToUpdate: true,
                 targetId: anID,
                 ajaxRelativePath: "/",
                 requestMethod: "put",
