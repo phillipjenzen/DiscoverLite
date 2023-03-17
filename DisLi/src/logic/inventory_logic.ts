@@ -6,6 +6,48 @@ const view_inventory = async (_req: Request, res: Response) => {
   try {
     const item_details = await Item.findBy({});
 
+    let show_items: any = [
+      {
+        elementType: "divider",
+      },
+    ];
+
+    item_details.forEach((ele, idx) => {
+      show_items.push({
+        elementType: "blockHeading",
+        heading: ele.serial_number,
+        headingLevel: 2,
+        description: `<span style='color:red;font-size:1.0025rem'>${ele.status}</span><span style='font-size:1.0025rem'> - ${ele.brand} ${ele.model}</span><br></br>${ele.code_name}`,
+        buttons: [
+          {
+            elementType: "linkButton",
+            title: "information",
+            icon: "notification_information",
+            iconPosition: "iconOnly",
+            actionStyle: "normal",
+            link: {
+              relativePath: " ",
+            },
+          },
+          {
+            elementType: "linkButton",
+            title: "delete",
+            icon: "delete",
+            actionStyle: "destructive",
+            iconPosition: "iconOnly",
+            confirmationMessage: "Are you sure you want to delete this?",
+            link: {
+              relativePath: " ",
+            },
+          },
+        ],
+      });
+
+      show_items.push({
+        elementType: "divider",
+      });
+    });
+
     const data = {
       metadata: {
         version: "2.0",
@@ -18,7 +60,7 @@ const view_inventory = async (_req: Request, res: Response) => {
           headingLevel: 1,
           headingFontWeight: "light",
           description:
-            "<strong>Filter:</strong> <br></br>code name: 'Freshman iPads'",
+            "<strong>Filter:</strong> <br></br>code name: 'placeholder text :)'",
           descriptionLineHeight: "loose",
           descriptionFontStyle: "italic",
           descriptionTextColor: "#566573",
@@ -26,41 +68,7 @@ const view_inventory = async (_req: Request, res: Response) => {
         {
           elementType: "container",
           id: "custom_styling",
-          content: [
-            {
-              elementType: "divider",
-            },
-            {
-              elementType: "blockHeading",
-              heading: "1941ce97-f86c-4b43-813e-1661f5614e1b",
-              headingLevel: 2,
-              description:
-                "<span style='color:red;font-size:1.0025rem'>Checked Out</span><span style='font-size:1.0025rem'> - Apple iPad (2022)</span><br></br>Freshman iPads",
-              buttons: [
-                {
-                  elementType: "linkButton",
-                  title: "information",
-                  icon: "notification_information",
-                  iconPosition: "iconOnly",
-                  actionStyle: "normal",
-                  link: {
-                    relativePath: " ",
-                  },
-                },
-                {
-                  elementType: "linkButton",
-                  title: "delete",
-                  icon: "delete",
-                  actionStyle: "destructive",
-                  iconPosition: "iconOnly",
-                  confirmationMessage: "Are you sure you want to delete this?",
-                  link: {
-                    relativePath: " ",
-                  },
-                },
-              ],
-            },
-          ],
+          content: item_details,
         },
       ],
     };
