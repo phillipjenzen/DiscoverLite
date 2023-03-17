@@ -62,6 +62,7 @@ const view_inventory = async (_req: Request, res: Response) => {
                 requestMethod: "put",
                 postData: {
                   serial_number: ele.serial_number,
+                  deprecated: true,
                 },
               },
             ],
