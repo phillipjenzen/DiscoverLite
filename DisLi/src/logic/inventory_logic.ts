@@ -55,16 +55,6 @@ const view_inventory = async (_req: Request, res: Response) => {
                   deprecated: true,
                 },
               },
-              {
-                eventName: "click",
-                action: "hide",
-                targetId: anID,
-              },
-              {
-                eventName: "click",
-                action: "hide",
-                targetId: `${anID}DIV`,
-              },
             ],
           },
         ],
@@ -174,11 +164,9 @@ const modify_item = async (req: Request, res: Response) => {
           version: "2.0",
         },
         elementFields: {
-          heading: "",
+          heading: "<div style='color:red'>REMOVED</div>",
           description: "",
           buttons: [],
-          marginTop: "none",
-          marginBottom: "none",
         },
       };
 
