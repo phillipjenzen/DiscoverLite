@@ -173,11 +173,7 @@ const modify_item = async (req: Request, res: Response) => {
         metadata: {
           version: "2.0",
         },
-        elementFields: {
-          title: "REMOVED",
-          buttonType: "submit",
-          actionStyle: "destructive",
-        },
+        elementFields: {},
       };
 
       res.status(201).json(thing);
