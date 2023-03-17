@@ -47,7 +47,7 @@ const view_inventory = async (_req: Request, res: Response) => {
                 eventName: "click",
                 action: "ajaxUpdate",
                 useRelativePathToUpdate: true,
-                targetId: "",
+                targetId: anID,
                 ajaxRelativePath: "/",
                 requestMethod: "put",
                 postData: {
