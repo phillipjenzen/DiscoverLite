@@ -73,7 +73,7 @@ const view_inventory = async (_req: Request, res: Response) => {
       ],
     };
 
-    console.log(item_details);
+    console.log(data);
 
     res.status(200).json(data);
   } catch (err) {
