@@ -200,10 +200,12 @@ const add_item = async (req: Request, res: Response) => {
   } catch (err) {
     console.log(err.stack);
     if (err instanceof QueryFailedError) {
-      data.content[1].items[0].description = `"description": "<span style='color:red;'>Item already exists in inventory</span>"`;
+      data.content[1].items[0].description =
+        "<span style='color:red;'>Item already exists in inventory</span>";
       res.status(400).send(data);
     } else {
-      data.content[1].items[0].description = `"description": "<span style='color:red;'>You tried to do something silly!</span>"`;
+      data.content[1].items[0].description =
+        "<span style='color:red;'>You tried to do something silly!</span>";
       res.status(400).send(data);
     }
   }
