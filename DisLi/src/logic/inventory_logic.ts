@@ -280,6 +280,7 @@ const add_item_page = (req: Request, res: Response) => {
     },
     content: [
       {
+        id: "aForm",
         elementType: "form",
         relativePath: "",
         items: [
@@ -315,7 +316,7 @@ const add_item_page = (req: Request, res: Response) => {
                 eventName: "click",
                 action: "ajaxUpdate",
                 useRelativePathToUpdate: true,
-                targetId: "anID",
+                targetId: "aForm",
                 ajaxRelativePath: "/",
                 requestMethod: "post",
               },
