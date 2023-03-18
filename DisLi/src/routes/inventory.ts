@@ -18,11 +18,11 @@ import inventory_logic from "../logic/inventory_logic";
 
 router.get("/add", inventory_logic.add_item_page);
 
+router.post("/add", inventory_logic.add_item);
+
 router.get("/", inventory_logic.view_inventory);
 
 router.get("/:id", inventory_logic.view_item);
-
-router.post("/", inventory_logic.add_item);
 
 router.put("/", inventory_logic.modify_item);
 
