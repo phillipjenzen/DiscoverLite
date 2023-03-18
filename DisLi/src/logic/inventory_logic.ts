@@ -286,7 +286,7 @@ const add_item_page = (req: Request, res: Response) => {
       },
       {
         elementType: "form",
-        id: "sample_form",
+        id: "add_item_form",
         heading: {
           heading: "Add Inventory Item",
           headingLevel: 2,
