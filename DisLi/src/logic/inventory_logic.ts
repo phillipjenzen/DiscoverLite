@@ -270,7 +270,8 @@ const modify_item = async (req: Request, res: Response) => {
   }
 };
 
-const add_item_page = async (_req: Request, res: Response) => {
+const add_item_page = (req: Request, res: Response) => {
+  console.log(req.body);
   const data = {
     metadata: {
       version: "2",

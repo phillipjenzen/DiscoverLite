@@ -16,12 +16,13 @@ import inventory_logic from "../logic/inventory_logic";
 
 // router.put("/", authorize_page([UserRole.ADMIN]), inventory_logic.modify_item);
 
+router.get("/add", inventory_logic.add_item_page);
+
 router.get("/", inventory_logic.view_inventory);
 
 router.get("/:id", inventory_logic.view_item);
 
 router.post("/", inventory_logic.add_item);
-router.get("/add", inventory_logic.add_item_page);
 
 router.put("/", inventory_logic.modify_item);
 
