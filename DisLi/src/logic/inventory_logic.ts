@@ -119,10 +119,73 @@ const view_item = async (req: Request, res: Response) => {
 };
 
 const add_item = async (req: Request, res: Response) => {
+  const data: any = {
+    metadata: {
+      version: "2.0",
+    },
+    contentContainerWidth: "narrow",
+    content: [
+      {
+        elementType: "divider",
+        borderColor: "transparent",
+      },
+      {
+        elementType: "form",
+        id: "add_item_form",
+        heading: {
+          heading: "Add Inventory Item",
+          headingLevel: 2,
+          description: "Items marked with an asterisk (*) are required.",
+        },
+        items: [
+          {
+            elementType: "formInputBarcode",
+            name: "serial_number",
+            label: "Serial Number",
+            required: true,
+          },
+          {
+            elementType: "formInputText",
+            name: "brand",
+            label: "Brand",
+          },
+          {
+            elementType: "formInputText",
+            name: "model",
+            label: "Model",
+          },
+          {
+            elementType: "formInputText",
+            name: "code_name",
+            label: "Code Name",
+          },
+        ],
+        buttons: [
+          {
+            elementType: "formButton",
+            name: "s1_reset",
+            title: "Reset",
+            buttonType: "reset",
+            actionStyle: "destructiveQuiet",
+            minWidth: "8rem",
+          },
+          {
+            elementType: "formButton",
+            name: "s1_submit",
+            title: "Submit",
+            buttonType: "submit",
+            actionStyle: "constructive",
+            minWidth: "8rem",
+          },
+        ],
+        trackDirtyStateButtonNames: ["serial_number"],
+        buttonsHorizontalAlignment: "center",
+      },
+    ],
+  };
+
   try {
     const { serial_number, brand, model, code_name } = req.body;
-
-    console.log(req);
 
     const new_device = Item.create({
       serial_number,
@@ -133,78 +196,15 @@ const add_item = async (req: Request, res: Response) => {
 
     await Item.insert(new_device);
 
-    const data = {
-      metadata: {
-        version: "2.0",
-      },
-      contentContainerWidth: "narrow",
-      content: [
-        {
-          elementType: "divider",
-          borderColor: "transparent",
-        },
-        {
-          elementType: "form",
-          id: "add_item_form",
-          heading: {
-            heading: "Add Inventory Item",
-            headingLevel: 2,
-            description: "Items marked with an asterisk (*) are required.",
-          },
-          items: [
-            {
-              elementType: "formInputBarcode",
-              name: "serial_number",
-              label: "Serial Number",
-              required: true,
-            },
-            {
-              elementType: "formInputText",
-              name: "brand",
-              label: "Brand",
-            },
-            {
-              elementType: "formInputText",
-              name: "model",
-              label: "Model",
-            },
-            {
-              elementType: "formInputText",
-              name: "code_name",
-              label: "Code Name",
-            },
-          ],
-          buttons: [
-            {
-              elementType: "formButton",
-              name: "s1_reset",
-              title: "Reset",
-              buttonType: "reset",
-              actionStyle: "destructiveQuiet",
-              minWidth: "8rem",
-            },
-            {
-              elementType: "formButton",
-              name: "s1_submit",
-              title: "Submit",
-              buttonType: "submit",
-              actionStyle: "constructive",
-              minWidth: "8rem",
-            },
-          ],
-          trackDirtyStateButtonNames: ["serial_number"],
-          buttonsHorizontalAlignment: "center",
-        },
-      ],
-    };
-
     res.status(201).json(data);
   } catch (err) {
     console.log(err.stack);
     if (err instanceof QueryFailedError) {
-      res.status(400).send(err.message);
+      data.content[1].items[0].description = `"description": "<span style='color:red;'>Item already exists in inventory</span>"`;
+      res.status(400).send(data);
     } else {
-      res.status(400).send("ERROR");
+      data.content[1].items[0].description = `"description": "<span style='color:red;'>You tried to do something silly!</span>"`;
+      res.status(400).send(data);
     }
   }
 };
