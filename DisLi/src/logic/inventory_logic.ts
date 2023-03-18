@@ -122,6 +122,8 @@ const add_item = async (req: Request, res: Response) => {
   try {
     const { serial_number, brand, model, code_name } = req.body;
 
+    console.log(req);
+
     const new_device = Item.create({
       serial_number,
       brand,
