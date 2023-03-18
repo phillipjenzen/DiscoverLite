@@ -5,7 +5,10 @@ import { replaceAll } from "../utils/replaceAll";
 
 const view_inventory = async (_req: Request, res: Response) => {
   try {
-    const item_details = await Item.findBy({ deprecated: false });
+    const item_details = await Item.find({
+      where: { deprecated: false },
+      order: { created_at: "DESC" },
+    });
 
     let show_items: any = [
       {
@@ -209,7 +212,7 @@ const modify_item = async (req: Request, res: Response) => {
         },
         elementFields: {
           heading: serial_number,
-          headingLevel: 3,
+          headingLevel: 2,
           description: `<span style='color:red;font-size:1.0025rem'>${
             item_details!.status
           }</span><span style='font-size:1.0025rem'> - ${item_details!.brand} ${
