@@ -158,16 +158,82 @@ const modify_item = async (req: Request, res: Response) => {
 
     await Item.update({ serial_number }, existing_item);
 
-    if (deprecated) {
+    if (deprecated === true) {
+      const anID = replaceAll(serial_number, "-", "");
+
       const thing = {
         metadata: {
           version: "2.0",
         },
         elementFields: {
           heading: "<span style='color:red;'>REMOVED</span>",
-          headingLevel: 2,
+          headingLevel: 3,
           description: "",
-          buttons: [],
+          buttons: [
+            {
+              elementType: "formButton",
+              title: "undo",
+              icon: "reload",
+              buttonType: "submit",
+              actionStyle: "destructive",
+              iconPosition: "iconOnly",
+              confirmationMessage: "Are you sure you want to undo this?",
+              events: [
+                {
+                  eventName: "click",
+                  action: "ajaxUpdate",
+                  useRelativePathToUpdate: true,
+                  targetId: anID,
+                  ajaxRelativePath: "/",
+                  requestMethod: "put",
+                  postData: {
+                    serial_number,
+                    deprecated: false,
+                  },
+                },
+              ],
+            },
+          ],
+        },
+      };
+
+      res.status(201).json(thing);
+    } else if (deprecated === false) {
+      const anID = replaceAll(serial_number, "-", "");
+
+      const thing = {
+        metadata: {
+          version: "2.0",
+        },
+        elementFields: {
+          heading: "<span style='color:red;'>REMOVED</span>",
+          headingLevel: 3,
+          description: "",
+          buttons: [
+            {
+              elementType: "formButton",
+              title: "undo",
+              icon: "reload",
+              buttonType: "submit",
+              actionStyle: "destructive",
+              iconPosition: "iconOnly",
+              confirmationMessage: "Are you sure you want to undo this?",
+              events: [
+                {
+                  eventName: "click",
+                  action: "ajaxUpdate",
+                  useRelativePathToUpdate: true,
+                  targetId: anID,
+                  ajaxRelativePath: "/",
+                  requestMethod: "put",
+                  postData: {
+                    serial_number,
+                    deprecated: true,
+                  },
+                },
+              ],
+            },
+          ],
         },
       };
 
