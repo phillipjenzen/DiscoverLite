@@ -339,7 +339,7 @@ const modify_item = async (req: Request, res: Response) => {
 
 const add_item_page = async (_req: Request, res: Response) => {
   const thing = Item.createQueryBuilder("Item")
-    .select("DISTINCT Item.brand")
+    .select("Item.brand")
     .distinct(true)
     .getRawMany();
 
