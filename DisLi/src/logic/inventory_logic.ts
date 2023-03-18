@@ -18,7 +18,6 @@ const view_inventory = async (_req: Request, res: Response) => {
 
     item_details.forEach((ele) => {
       const anID = replaceAll(ele.serial_number, "-", "");
-      console.log(anID);
 
       show_items.push({
         id: anID,
@@ -213,7 +212,6 @@ const add_item = async (req: Request, res: Response) => {
 
 const modify_item = async (req: Request, res: Response) => {
   try {
-    console.log("SUP FROM inventory_logic - modify_item");
     const serial_number = req.body.serial_number;
 
     const existing_item = await Item.findOneByOrFail({ serial_number });
@@ -339,8 +337,14 @@ const modify_item = async (req: Request, res: Response) => {
   }
 };
 
-const add_item_page = (req: Request, res: Response) => {
-  console.log(req.body);
+const add_item_page = async (req: Request, res: Response) => {
+  const thing = Item.createQueryBuilder("Item")
+    .select("DISTINCT Item.brand")
+    .distinct(true)
+    .getRawMany();
+
+  console.log(thing);
+
   const data = {
     metadata: {
       version: "2.0",
