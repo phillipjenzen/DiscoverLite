@@ -276,16 +276,25 @@ const add_item_page = (req: Request, res: Response) => {
   console.log(req.body);
   const data = {
     metadata: {
-      version: "2",
+      version: "2.0",
     },
+    contentContainerWidth: "narrow",
     content: [
       {
-        id: "aForm",
+        elementType: "divider",
+        borderColor: "transparent",
+      },
+      {
         elementType: "form",
-        relativePath: "",
+        id: "sample_form",
+        heading: {
+          heading: "Add Inventory Item",
+          headingLevel: 2,
+          description: "Items marked with an asterisk (*) are required.",
+        },
         items: [
           {
-            elementType: "formInputBarcode",
+            elementType: "formInputText",
             name: "serial_number",
             label: "Serial Number",
             required: true,
@@ -309,20 +318,23 @@ const add_item_page = (req: Request, res: Response) => {
         buttons: [
           {
             elementType: "formButton",
-            title: "Add",
+            name: "s1_reset",
+            title: "Reset",
+            buttonType: "reset",
+            actionStyle: "destructiveQuiet",
+            minWidth: "8rem",
+          },
+          {
+            elementType: "formButton",
+            name: "s1_submit",
+            title: "Submit",
             buttonType: "submit",
-            events: [
-              {
-                eventName: "click",
-                action: "ajaxUpdate",
-                useRelativePathToUpdate: true,
-                targetId: "aForm",
-                ajaxRelativePath: "/",
-                requestMethod: "post",
-              },
-            ],
+            actionStyle: "constructive",
+            minWidth: "8rem",
           },
         ],
+        trackDirtyStateButtonNames: ["serial_number"],
+        buttonsHorizontalAlignment: "center",
       },
     ],
   };
