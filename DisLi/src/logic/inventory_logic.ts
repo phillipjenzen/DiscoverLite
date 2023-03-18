@@ -270,4 +270,60 @@ const modify_item = async (req: Request, res: Response) => {
   }
 };
 
-export = { view_inventory, view_item, add_item, modify_item };
+const add_item_page = async (_req: Request, res: Response) => {
+  const data = {
+    metadata: {
+      version: "2",
+    },
+    content: [
+      {
+        elementType: "form",
+        relativePath: "",
+        items: [
+          {
+            elementType: "formInputBarcode",
+            name: "serial_number",
+            label: "Serial Number",
+            required: true,
+          },
+          {
+            elementType: "formInputText",
+            name: "brand",
+            label: "Brand",
+          },
+          {
+            elementType: "formInputText",
+            name: "model",
+            label: "Model",
+          },
+          {
+            elementType: "formInputText",
+            name: "code_name",
+            label: "Code Name",
+          },
+        ],
+        buttons: [
+          {
+            elementType: "formButton",
+            title: "Add",
+            buttonType: "submit",
+            events: [
+              {
+                eventName: "click",
+                action: "ajaxUpdate",
+                useRelativePathToUpdate: true,
+                targetId: "anID",
+                ajaxRelativePath: "/",
+                requestMethod: "post",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  };
+
+  res.status(200).json(data);
+};
+
+export = { view_inventory, view_item, add_item, modify_item, add_item_page };
