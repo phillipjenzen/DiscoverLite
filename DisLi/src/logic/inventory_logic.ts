@@ -199,6 +199,8 @@ const modify_item = async (req: Request, res: Response) => {
 
       res.status(201).json(thing);
     } else if (deprecated === false) {
+      const item_details = await Item.findOneBy({ serial_number });
+
       const anID = replaceAll(serial_number, "-", "");
 
       const thing = {
@@ -206,18 +208,32 @@ const modify_item = async (req: Request, res: Response) => {
           version: "2.0",
         },
         elementFields: {
-          heading: "<span style='color:red;'>REMOVED</span>",
+          heading: serial_number,
           headingLevel: 3,
-          description: "",
+          description: `<span style='color:red;font-size:1.0025rem'>${
+            item_details!.status
+          }</span><span style='font-size:1.0025rem'> - ${item_details!.brand} ${
+            item_details!.model
+          }</span><br></br>${item_details!.code_name}`,
           buttons: [
             {
+              elementType: "linkButton",
+              title: "information",
+              icon: "notification_information",
+              iconPosition: "iconOnly",
+              actionStyle: "normal",
+              link: {
+                relativePath: " ",
+              },
+            },
+            {
               elementType: "formButton",
-              title: "undo",
-              icon: "reload",
+              title: "delete",
+              icon: "delete",
               buttonType: "submit",
               actionStyle: "destructive",
               iconPosition: "iconOnly",
-              confirmationMessage: "Are you sure you want to undo this?",
+              confirmationMessage: "Are you sure you want to delete this?",
               events: [
                 {
                   eventName: "click",
