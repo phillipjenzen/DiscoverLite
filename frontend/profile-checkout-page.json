@@ -1,0 +1,153 @@
+{
+    "metadata": {
+        "version": "2.0"
+    },
+    "contentContainerWidth": "narrow",
+    "content": [
+        {
+			"elementType": "blockHeading",
+			"heading": "Please Select a Device for Checkout",
+			"headingTextAlignment": "center",
+			"headingLevel": 1
+		},
+        {
+            "elementType": "divider",
+            "borderStyle": "solid",
+            "borderWidth": "3px",
+            "borderColor": "black"
+        },
+        {
+            "elementType": "container",
+            "id": "image_styles",
+            "content": [
+                {
+                    "elementType": "list",
+                    "itemSize": "large",
+                    "imageStyle": "thumbnailTall",
+                    "titleLineClamp": 2,
+                    "descriptionLineClamp": 3,
+                    "items": [
+                        {
+                            "title": "CSUCCESS",
+                            "description": "Category: CSUCCESS / Model: IPad Air 4 / Brand: Apple",
+                            "image": {
+                                "url": "https://assets.cheqroomcdn.com/app/groups/califorina_state_universtiy_fresno/52aab4e2-2499-11ed-96e6-0a58a9feac02.jpg",
+                                "alt": "csuccess img"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "elementType": "list",
+                    "itemSize": "large",
+                    "imageStyle": "thumbnailTall",
+                    "titleLineClamp": 2,
+                    "descriptionLineClamp": 3,
+                    "items": [
+                        {
+                            "title": "DISCOVERe",
+                            "description": "Category: DISCOVERe / Model: IPad Gen 5 / Brand: Apple",
+                            "image": {
+                                "url": "https://upload.wikimedia.org/wikipedia/commons/6/60/IPad_2017_tablet.jpg",
+                                "alt": "discovere ipad img"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "elementType": "list",
+                    "itemSize": "large",
+                    "imageStyle": "thumbnailTall",
+                    "titleLineClamp": 2,
+                    "descriptionLineClamp": 3,
+                    "items": [
+                        {
+                            "title": "Hotspot",
+                            "description": "Category: Hotspots / Model: AT&T Nighthawk MR1100 / Brand: AT&T",
+                            "image": {
+                                "url": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6212/6212403_rd.jpg",
+                                "alt": "Hotspot img"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "elementType": "calendarPicker",
+            "selectedDate": "2023-03-08",
+            "id": "selected_date"
+        },
+        {
+            "elementType": "container",
+            "id": "widths",
+            "content": [
+                {
+                    "elementType": "dropdown",
+                    "title": "Select a time",
+                    "dropDirection": "right",
+                    "items": [
+                        {
+                            "title": "9:00 AM"
+                        },
+                        {
+                            "title": "9:30 AM"
+                            
+                        },
+                        {
+                            "title": "10:00 AM"
+                
+                        },
+                        {
+                            "title": "10:30 AM"
+                           
+                        },
+                        {
+                            "title": "11:00 AM"
+                            
+                        },
+                        {
+                            "title": "11:30 AM"
+                            
+                        },
+                        {
+                            "title": "12:00 PM"
+                            
+                        },
+                        {
+                            "title": "12:30 PM"
+                            
+                        },
+                        {
+                            "title": "1:00 PM"
+                            
+                        },
+                        {
+                            "title": "1:30 PM"
+                           
+                        },
+                        {
+                            "title": "2:00 PM"
+                            
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "elementType": "container",
+            "id": "footerContainer",
+            "padding": "medium",
+            "content": [
+                {
+                    "elementType": "html",
+                    "html": "<h1 style='color: #333333; font-size: 20px; margin-top: 50px; margin-bottom: 30px; display: inline-block; text-align: center; width: 100%;'>Thank you for scheduling an appointment with DISCOVERe, we are looking forward to seeing you!</h1>"
+                },
+                {
+                    "elementType": "html",
+                    "html": "<a href='https://fsm4sbx-edit.modolabs.net/fresno_state_default_persona/device/small-unknown-unknown-preview/dnd_publish/_/profile_page' style='max-width: 10em; background-color: #4CAF50; color: white; padding: 8px 16px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; border-radius: 5px; margin-top: 20px; transition: background-color 0.3s ease; display: block; margin: 0 auto;'>Go back to Profile</a>"
+                }
+            ]
+        }
+    ]
+}
